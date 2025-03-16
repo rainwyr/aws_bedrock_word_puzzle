@@ -16,8 +16,11 @@
 ##  Trouble shoot
 
 ### IAM
-* Lambda Function need access to Get and Put S3 objects: policy `AmazonS3FullAccess` is attached to role `puzzle_manager-role-2clfko0l`
-* Bedrock Agent need access to invoke Lambda Functions: attach policy `AWSLambda_FullAccess` to `AmazonBedrockExecutionRoleForAgents_PP0U8PI3IUH`
+* Lambda Function need access to Get and Put S3 objects
+   * Policy `AmazonS3FullAccess` is attached to role `puzzle_manager-role-2clfko0l`
+* Bedrock Agent need access to invoke Lambda Functions:
+   * Policy `AWSLambda_FullAccess` is attached to `AmazonBedrockExecutionRoleForAgents_PP0U8PI3IUH`
+   * A resource-based policy is required on Lambda Function
 ```
   {
   "Version": "2012-10-17",
@@ -42,7 +45,7 @@
 ```
 
 ### Lambda Function Debug
-* Input: Lambda gets different input during testing vs. when triggered by Bedrock. So it's possible the Lambda test is successful but Bedrock invoking Lambda is not.
+* **Input**: Lambda gets different input during testing vs. when triggered by Bedrock. So it's possible the Lambda test is successful but Bedrock invoking Lambda is not.
   * Add logging in Lambda function to examine input format
   * Use CloudWatch to examine the logs as Bedrock invokes Lambda
-* Output: Even when the task is completed successfully, Bedrock agent may still throw the error `The server encountered an error processing the Lambda response. Check the Lambda response and retry the request`. Solution: [Action group Lambda function example > Function details](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html#agents-lambda-example)
+* **Output**: Even when the task is completed successfully, Bedrock agent may still throw the error `The server encountered an error processing the Lambda response. Check the Lambda response and retry the request`. Solution: [Action group Lambda function example > Function details](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html#agents-lambda-example)
