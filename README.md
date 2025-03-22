@@ -12,9 +12,13 @@
 # Example Result
 
 * Using AWS Console chat:
+
 ![Alt text](screenshot-console.png)
 
 * Using AWS Bedrock API:
+
+```$ python create_puzzles.py```
+
 ![Alt text](screenshot-api.png)
 
 # Iteration Notes
