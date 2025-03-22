@@ -12,6 +12,7 @@ For the meta component:
    2. A rectangular slip of paper, promising payment from stored funds
    3. A repeating pattern of crossed lines, popular in casual shirts and tablecloths
    4. In chess, a threatening move that puts the king in immediate danger
+For the descriptions, please avoid any description that could trigger automatic filter due to conflict with AUP/AWS Responsibility AI Policy.
 
 After generating the descriptions, create a dictionary with the following structure:
 {

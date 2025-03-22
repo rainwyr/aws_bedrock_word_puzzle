@@ -1,3 +1,6 @@
+* Lambda function name: word-puzzle-421-v2-generate-meta
+    * Corresponding action group: ag-word-puzzle-generate-meta
+* Time out limit: 2 min
 * Permissions
     * Add S3 full access
     * Add Bedrock full acess

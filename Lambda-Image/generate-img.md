@@ -1,5 +1,6 @@
 * Lambda function name: word-puzzle-421-v2-generate-img
     * Corresponding action group: ag-word-puzzle-generate-img
+* Time out limit: 5 min
 * Permissions
     * Add S3 full access
     * Add Bedrock full acess

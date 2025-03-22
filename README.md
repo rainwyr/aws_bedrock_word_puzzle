@@ -2,24 +2,6 @@
 
 * Design: Agent is asked to create a puzzle given a target word using two tools
     * generate puzzle meta: saves the following json to S3 folders
-        ```
-        {
-            "puzzle_id": "<uuid>",
-            "target_word": "<target_word>",
-            "descriptions": {
-                "1": "<description 1>",
-                "2": "<description 2>",
-                "3": "<description 3>",
-                "4": "<description 4>"
-            },
-            "image_urls": {
-                "1": "<puzzle_id>_1.png",
-                "2": "<puzzle_id>_2.png",
-                "3": "<puzzle_id>_3.png",
-                "4": "<puzzle_id>_4.png"
-            }
-        }
-        ```
     * generate puzzle images: retrieves above meta, generate images according to the descriptions, and then save the images to the S3 images/ folder using the given image_url as file name
 
 * AWS setup:
@@ -29,9 +11,18 @@
 
 # Example Result
 
+* Using AWS Console chat:
+
+![Alt text](screenshot-console.png)
+
+* Using AWS Bedrock API:
+
+![Alt text](screenshot-api.png)
 
 
-# Retrospective
+
+
+# Iteration Notes
 
 * Wordflow refactor 1:
     * Old workflow: agent pass a target_word and desccriptions to Lambda.
