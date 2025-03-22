@@ -1,9 +1,9 @@
 # High Level Summary
 
+* Puzzle: 4-images-1-word
 * Design: Agent is asked to create a puzzle given a target word using two tools
     * generate puzzle meta: saves the following json to S3 folders
     * generate puzzle images: retrieves above meta, generate images according to the descriptions, and then save the images to the S3 images/ folder using the given image_url as file name
-
 * AWS setup:
     * Storage: S3
     * Tool: Lambda function
@@ -12,15 +12,10 @@
 # Example Result
 
 * Using AWS Console chat:
-
 ![Alt text](screenshot-console.png)
 
 * Using AWS Bedrock API:
-
 ![Alt text](screenshot-api.png)
-
-
-
 
 # Iteration Notes
 
