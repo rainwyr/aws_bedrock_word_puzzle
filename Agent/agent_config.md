@@ -6,5 +6,5 @@
     * Function: upload_puzzle_meta_to_s3_from_json
     * Parameters: puzzle_json
 * Action Group: ag-generate-puzzle-img
-    * Function: generate_images_for_word
-    * Parameters: target_word
+    * Function: generate_images_for_puzzle
+    * Parameters: puzzle_id

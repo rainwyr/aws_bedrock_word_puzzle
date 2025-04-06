@@ -1,6 +1,7 @@
 # High Level Summary
 
-* Puzzle: 4-images-1-word
+* Target Puzzle: 4-images-1-word
+    * Puzzle Generation: 6-images-1-word
 * Design: Agent is asked to create a puzzle given a target word using two tools
     * generate puzzle meta: saves the following json to S3 folders
     * generate puzzle images: retrieves above meta, generate images according to the descriptions, and then save the images to the S3 images/ folder using the given image_url as file name
@@ -31,3 +32,7 @@
     * Old workflow: one agent generates puzzle metadata and images.
     * New workflow: two separate agents generate metadata and images respectively.
     * Reason: Modularize workflows, less confusion for each agent.
+* Wordflow refactor 3:
+    * Old workflow: generate 4 images at a time.
+    * New workflow: generate 6 images at a time.
+    * Reason: Improve relevance by choosing the 4 best images out of the 6 later.
